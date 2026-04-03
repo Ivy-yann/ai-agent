@@ -3,70 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI 客服接入与调试台</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>AI 客服测试</title>
   </head>
   <body>
-    <header class="topbar">
-      <h1>AI 客服接入与调试台</h1>
-      <p>用于快速配置、启动与排查 Chat SDK 接入问题</p>
-    </header>
-
-    <main class="layout">
-      <section class="panel config-panel">
-        <h2>接入配置</h2>
-        <form id="configForm">
-          <label>
-            Bot ID
-            <input id="botId" name="botId" type="text" placeholder="例如: 73428668*****" required />
-          </label>
-
-          <label>
-            鉴权 Token（可选）
-            <input id="token" name="token" type="password" placeholder="临时调试 token" />
-          </label>
-
-          <label>
-            用户 ID（可选）
-            <input id="userId" name="userId" type="text" placeholder="test-user-001" />
-          </label>
-
-          <label>
-            主题
-            <select id="theme" name="theme">
-              <option value="light">浅色</option>
-              <option value="dark">深色</option>
-            </select>
-          </label>
-
-          <label class="checkbox">
-            <input id="useIframe" name="useIframe" type="checkbox" checked />
-            以 iframe 模式加载
-          </label>
-
-          <div class="button-row">
-            <button type="submit">启动聊天组件</button>
-            <button type="button" id="clearLogs" class="ghost">清空日志</button>
-          </div>
-        </form>
-
-        <div class="code-block">
-<pre><code id="snippet"></code></pre>
-        </div>
-      </section>
-
-      <section class="panel preview-panel">
-        <h2>预览与调试</h2>
-        <div class="chat-wrapper" id="chatRoot">
-          <div class="placeholder">请先填写配置并点击“启动聊天组件”</div>
-        </div>
-
-        <h3>运行日志</h3>
-        <ul id="logs" class="logs"></ul>
-      </section>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/@coze/chat-sdk/dist/index.min.js"></script>
-    <script src="app.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
